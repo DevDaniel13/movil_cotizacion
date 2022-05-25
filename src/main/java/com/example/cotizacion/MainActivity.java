@@ -1,6 +1,9 @@
 package com.example.cotizacion;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
 import android.view.View;
 import android.os.Bundle;
 import android.widget.*;
@@ -18,6 +21,25 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtPorcentaje;
     private EditText txtPlazo;
     private Button btnCotizacion;
+    private Button btnCerrar;
+    private Button btnLimpiar;
+
+    private void Cerrar(){
+        AlertDialog.Builder confirmar=new AlertDialog.Builder(this);
+        confirmar.setTitle("¿Cerrar APP?");
+        confirmar.setMessage("Se descartara toda la informacion ingresada");
+        confirmar.setPositiveButton("Confirmar",new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialogInterface, int i){
+                finish();
+            }
+        });
+        confirmar.setNegativeButton("Cancelar", new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialogInterface, int i){
+
+            }
+        });
+        confirmar.show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         txtPorcentaje=(EditText) findViewById(R.id.txtPorcentaje);
         txtPlazo=(EditText) findViewById(R.id.txtPlazo);
         btnCotizacion=(Button) findViewById(R.id.btnCotizacion);
+        btnCerrar=(Button) findViewById(R.id.btnCerrar);
+        btnLimpiar=(Button) findViewById(R.id.btnLimpiar);
         lblNumCotizacion.setText("Capture el numero de cotizacion");
         lblDescripcion.setText("Capture la descripcion del auto");
         lblPrecio.setText("Capture el precio del auto");
@@ -54,6 +78,21 @@ public class MainActivity extends AppCompatActivity {
                         "\nPago inicial: $"+cotizacion.calculoInicial()+ "\n Total a financiar: $"+
                         cotizacion.totalFinanciar()+"\n Pago mensual: $"+cotizacion.pagoMensual());
 
+            }
+        });
+        btnCerrar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Cerrar();
+            }
+        });
+        btnLimpiar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                txtNumCotizacion.setText("");
+                txtDescripcion.setText("");
+                txtPrecio.setText("");
+                txtPorcentaje.setText("");
+                txtPlazo.setText("");
+                lblDatos.setText("");
             }
         });
     }
