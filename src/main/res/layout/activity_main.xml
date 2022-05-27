@@ -14,13 +14,14 @@
         android:paddingRight="16dp"
         android:paddingTop="16dp">
         <TextView
-            android:id="@+id/lblNumCotizacion"
+            android:id="@+id/lblNum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="left"
+            android:text="@string/lblNum"
             />
         <EditText
-            android:id="@+id/txtNumCotizacion"
+            android:id="@+id/txtNum"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </EditText>
@@ -28,7 +29,8 @@
             android:id="@+id/lblDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="left"
+            android:text="@string/lblDescripcion"
             />
         <EditText
             android:id="@+id/txtDescripcion"
@@ -39,7 +41,8 @@
             android:id="@+id/lblPrecio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="left"
+            android:text="@string/lblPrecio"
             />
         <EditText
             android:id="@+id/txtPrecio"
@@ -50,7 +53,8 @@
             android:id="@+id/lblPorcentaje"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="left"
+            android:text="@string/lblPorcentaje"
             />
         <EditText
             android:id="@+id/txtPorcentaje"
@@ -61,7 +65,8 @@
             android:id="@+id/lblPlazo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="left"
+            android:text="@string/lblPlazo"
             />
         <EditText
             android:id="@+id/txtPlazo"
@@ -78,7 +83,7 @@
             android:id="@+id/lblDatos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="left"
             />
         <Button
             android:id="@+id/btnLimpiar"

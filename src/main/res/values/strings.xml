@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Cotizacion</string>
+    <string name="lblNum">Capture el numero de cotizacion</string>
+    <string name="lblDescripcion">Capture la descripcion del auto</string>
+    <string name="lblPrecio">Capture el precio del auto</string>
+    <string name="lblPorcentaje">Capture el porcentaje inicial del auto</string>
+    <string name="lblPlazo">Capture el plazo (meses) del auto</string>
 </resources>
